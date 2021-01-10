@@ -1,0 +1,134 @@
+------------------------------ Compare ArrayList, LinkedList --------------------------------------------
+N = 1000                                             N = 50 000
+----- ArrayList -----                               ----- ArrayList -----
+add(Object)                                         add(Object)
+elapsed time, ns: 678800                            elapsed time, ns: 10321700
+add(index, object)                                  add(index, object)
+ start:                                              start:
+elapsed time, ns: 11700                             elapsed time, ns: 63600
+ middle:                                             middle:
+elapsed time, ns: 2800                              elapsed time, ns: 62500
+ end:                                                end:
+elapsed time, ns: 1600                              elapsed time, ns: 159100
+clear()                                             clear()
+elapsed time, ns: 46900                             elapsed time, ns: 4722300
+remove(index, instance)                             remove(index, instance)
+ start:                                             start: 81000
+elapsed time, ns: 10100                             elapsed time, ns:
+ middle:                                            middle: 230500
+elapsed time, ns: 3000                              elapsed time, ns:
+ end:                                               end: 161600
+elapsed time, ns: 2900                              elapsed time, ns:
+----- LinkedList -----                              ----- LinkedList -----
+add(Object)                                         add(Object)
+elapsed time, ns: 54270                             elapsed time, ns: 7867600
+add(index, object)                                 add(index, object)
+ start:                                              start: 45500
+elapsed time, ns: 17600                             elapsed time, ns:
+ middle:                                             middle: 18100
+elapsed time, ns: 1810                             elapsed time, ns:
+ end:                                                end:
+elapsed time, ns: 2800                              elapsed time, ns: 34100
+clear()                                             clear()
+elapsed time, ns: 121100                            elapsed time, ns: 6009700
+remove(index, instance)                             remove(index, instance)
+ start:                                             start:
+elapsed time, ns: 19200                             elapsed time, ns: 16000
+  middle:                                           middle:
+elapsed time, ns: 18200                             elapsed time, ns: 21000
+ end:                                               end:
+elapsed time, ns: 47600                             elapsed time, ns: 39300
+
+-------------------------- Compare HashSet, LinkedHashSet, TreeSet --------------------------------------
+N = 1000                                                N = 50 000
+----- HashSet -----                                     ----- HashSet -----
+add(Object)                                             add(Object)
+elapsed time, ns: 392900                                elapsed time, ns: 19718200
+clear()                                                 clear()
+elapsed time, ns: 74700                                 elapsed time, ns: 5685400
+----- LinkedHashSet -----                               ----- LinkedHashSet -----
+add(Object)                                             add(Object)
+elapsed time, ns: 1022600                               elapsed time, ns: 15787500
+clear()                                                 clear()
+elapsed time, ns: 94600                                 elapsed time, ns: 799700
+----- TreeSet -----                                     ----- TreeSet -----
+add(Object)                                             add(Object)
+elapsed time, ns: 4708900                               elapsed time, ns: 88441100
+clear()                                                 clear()
+elapsed time, ns: 19200                                 elapsed time, ns: 20500
+
+------------------------------ Compare HashMap, LinkedHashMap, TreeMap ----------------------------------
+N = 1000                                                N = 50 000
+----- HashMap -----                                     ----- HashMap -----
+put(Integer key, Object Circle)                         put(Integer key, Object Circle)
+elapsed time, ns: 851100                                elapsed time, ns: 15353200
+clear()                                                 clear()
+elapsed time, ns: 217100                                elapsed time, ns: 122500
+remove(Object key)                                      remove(Object key)
+elapsed time, ns: 22500                                 elapsed time, ns: 24000
+----- LinkedHashMap -----                               ----- LinkedHashMap -----
+put(Integer key, Object Circle)                         put(Integer key, Object Circle)
+elapsed time, ns: 808100                                elapsed time, ns: 29822800
+clear()                                                 clear()
+elapsed time, ns: 72700                                 elapsed time, ns: 293300
+remove(Object key)                                      remove(Object key)
+elapsed time, ns: 5100                                  elapsed time, ns: 13000
+----- TreeMap -----                                     ----- TreeMap -----
+put(Integer key, Object Circle)                         put(Integer key, Object Circle)
+elapsed time, ns: 1083700                               elapsed time, ns: 36397300
+clear()                                                 clear()
+elapsed time, ns: 1800                                  elapsed time, ns: 5000
+remove(Object key)                                      remove(Object key)
+elapsed time, ns: 35400                                 elapsed time, ns: 36200
+
+
+Заключение по Collections
+1)  Сравнить производительность HashSet, LinkedHashSet, TreeSet для основных операций
+    Производительность по времени:
+                добавление (add(Set set)) лучший результат у HashSet
+                удаление (clear()) лучший результат у TreeSet
+
+    Справка:
+    HashSet — множество, которое основано на хеш-таблице, что в свою очередь помогает при поиске.
+    Использует хеш-функцию, которая улучшает производительно при поиске и вставке. Независимо
+    от количества элементов, в основном, вставка и поиск (иногда и удаление) выполняются за время,
+    близкое к постоянному — O(1).
+
+    LinkedHashSet — данный класс расширяет HashSet, при этом не добавляя никаких новых методов.
+    Как и LinkedList, данный класс поддерживает связный список элементов набора в том порядке,
+    в котором они вставлялись. Это позволяет организовать необходимый порядок в данной реализации Set.
+
+    Класс TreeSet создает множество, которое для организации структуры хранения элементов основано
+    на красно-черном дереве. Другими словами, в данном множестве мы можем сортировать элементы
+    в возрастающем порядке.
+
+2)  Сравнить производительность ArrayList и LinkedList для основных операций
+    Производительность по времени:
+              добавление(add(List list)/add(int index, List list)) лучший результат у LinkedList
+              удаление (clear()/remove(int index)) лучший результат у LinkedList
+    Справка:
+    При разных ситуациях ArrayList и LinkedList работают с разной скоростью.
+
+    ArrayList: худший выбор, если операция — вставка и удаление в начале-середине, потому что будут проходить
+    операции сдвига элементов справа.
+
+    LinkedList: лучший выбор, если нашей частой операцией является вставка и удаление в начале-середине;
+
+3)  Сравнить производительность HashMap, LinkedHashMap, TreeMap
+    Производительность по времение:
+            добавление (put(Map map)) лучший результат у  HashMap
+            удаление (clear()) лучший результат у TreeMap
+            удаление (remove(Object key)) лучший результат у LinkedHashMap
+    Справка:
+    HashMap — предназначена для хранения значений в произвольном порядке, но позволяет быстро искать
+    элементы карты. Позволяет задавать ключ ключевым словом null, но не более одного раза, т.к. пары
+    с одинаковыми ключами записываются поверх друг друга. Главным условием является уникальность ключей:
+    значения же могут повторяться (может быть несколько null значений).
+
+    LinkedHashMap — аналог HashMap, который хранит значения в порядке добавления. Соответственно,
+    как и LinkedList, у него есть header — голова двусвязного списка. При инициализации указывает
+    сам на себя.
+
+    TreeMap — это Map, сортирующая элементы по значениям ключа. Аналог TreeSet, но для пар
+    с ориентировкой на значения ключей.
+

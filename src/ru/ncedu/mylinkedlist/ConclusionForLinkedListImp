@@ -1,0 +1,46 @@
+Iter = 1000
+
+----- MyLinkedListImp -----                 ----- LinkedList -----
+add(E elements)                             add(E elements)
+elapsed time, ns: 8598800                   elapsed time, ns: 616800
+
+add(int index, E elemnts)                   add(int index, E elemnts)
+elapsed time, ns: 57000                     elapsed time, ns: 41300
+
+remove(int index)                           remove(int index)
+elapsed time, ns: 9049400                   elapsed time, ns: 36300
+
+clear                                       clear
+elapsed time, ns: 4700                      elapsed time, ns: 81100
+--------------------------------------------------------------------
+
+Iter = 50 000
+
+----- MyLinkedListImp -----                 ----- LinkedList -----
+add(E elements)                             add(E elements)
+elapsed time, ns: 51584400                  elapsed time, ns: 1651600
+
+add(int index, E elemnts)                   add(int index, E elemnts)
+elapsed time, ns: 60200                     elapsed time, ns: 37300
+
+remove(int index)                           remove(int index)
+elapsed time, ns: 7926600                   elapsed time, ns: 26200
+
+clear                                       clear
+elapsed time, ns: 4600                      elapsed time, ns: 373100
+--------------------------------------------------------------------
+
+Iter = 100 000
+
+----- MyLinkedListImp -----                 ----- LinkedList -----
+add(E elements)                             add(E elements)
+elapsed time, ns: 270173000                 elapsed time, ns: 2606000
+
+add(int index, E elemnts)                   add(int index, E elemnts)
+elapsed time, ns: 61200                     elapsed time, ns: 47700
+
+remove(int index)                           remove(int index)
+elapsed time, ns: 8809300                   elapsed time, ns: 26500
+
+clear                                       clear
+elapsed time, ns: 3800                      elapsed time, ns: 769500
