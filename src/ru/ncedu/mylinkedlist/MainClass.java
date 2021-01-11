@@ -129,32 +129,32 @@ public class MainClass {
         /********** MyLinkedListImp ***********/
         System.out.println("----- MyLinkedListImp -----");
         MyLinkedListImp<Integer> mylinkedlist = new MyLinkedListImp<Integer>();
-        //add by elements
+        /*add by elements*/
         System.out.println("add(E elements)" );
         addTimeMyLinkedList( mylinkedlist, N);
-        //add by index and elements
+        /*add by index and elements*/
         System.out.println("add(int index, E elemnts)" );
         addIndexTimeMyLinkedList(500,  mylinkedlist, N);
-        //remove by index
+        /*remove by index*/
         System.out.println("remove(int index)" );
         removeTimeMyLinkedList(500,  mylinkedlist);
-        //clear
+        /*clear*/
         System.out.println("clear");
         clearTimeMyLinkedList(mylinkedlist);
 
         /********** LinkedList ***********/
         System.out.println("----- LinkedList -----");
         LinkedList<Integer> linkedlist = new LinkedList<Integer>();
-        //add by elements
+        /*add by elements*/
         System.out.println("add(E elements)" );
         addTimeLinkedList( linkedlist, N);
-        //add by index and elements
+        /*add by index and elements*/
         System.out.println("add(int index, E elemnts)" );
         addIndexTimeLinkedList(500,  linkedlist, N);
-        //remove by index
+        /*remove by index*/
         System.out.println("remove(int index)" );
         removeTimeLinkedList(500,  linkedlist);
-        //clear
+        /*clear*/
         System.out.println("clear");
         clearTimeLinkedList(linkedlist);
 
