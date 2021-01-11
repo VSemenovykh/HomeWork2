@@ -44,3 +44,9 @@ elapsed time, ns: 8809300                   elapsed time, ns: 26500
 
 clear                                       clear
 elapsed time, ns: 3800                      elapsed time, ns: 769500
+
+Связанный список из класса MyLinkedListImp операцию clear() выполняет быстрей по времени, чем в LinkedList.
+А операции add(elements)/add(index, elements) и remove(index) cвязанный список из класса MyLinkedListImp
+выполняет медленее по времени.
+Также можно заметить, что с увеличением iter  связанный список из класса MyLinkedListImp операцию clear()
+выполняет ещё быстрей, то есть время уменьшается.

@@ -170,7 +170,7 @@ public class TestMainClass {
         System.out.println("----- Compare ArrayList, LinkedList -----");
         //ArrayList
         System.out.println("----- ArrayList -----");
-        ArrayList<Integer> arrayList = new ArrayList<Integer>();
+        List<Integer> arrayList = new ArrayList<Integer>();
         /*add*/
         System.out.println("add(Object)");
         addTimeList(arrayList, N);
@@ -200,7 +200,7 @@ public class TestMainClass {
 
         //LinkedList
         System.out.println("----- LinkedList -----");
-        LinkedList<Integer> linkedList = new LinkedList<Integer>();
+        List<Integer> linkedList = new LinkedList<Integer>();
         /*add*/
         System.out.println("add(Object)");
         addTimeList(linkedList, N);
@@ -232,7 +232,7 @@ public class TestMainClass {
         System.out.println("----- Compare HashSet, LinkedHashSet, TreeSet -----");
         //HashSet
         System.out.println("----- HashSet -----");
-        HashSet<Integer> hashSet = new HashSet<Integer>();
+        Set<Integer> hashSet = new HashSet<Integer>();
         /*add*/
         System.out.println("add(Object)");
         addTimeSet(hashSet, N);
@@ -243,7 +243,7 @@ public class TestMainClass {
 
         //LinkedHashSet
         System.out.println("----- LinkedHashSet -----");
-        LinkedHashSet<Integer> linkedHashSet = new LinkedHashSet<Integer>();
+        Set<Integer> linkedHashSet = new LinkedHashSet<Integer>();
         /*add*/
         System.out.println("add(Object)");
         addTimeSet(linkedHashSet, N);
@@ -267,7 +267,7 @@ public class TestMainClass {
         System.out.println("----- Compare HashMap, LinkedHashMap, TreeMap -----");
         //HashMap
         System.out.println("----- HashMap -----");
-        HashMap<Integer,Integer> hashMap = new HashMap<Integer, Integer>();
+        Map<Integer,Integer> hashMap = new HashMap<Integer, Integer>();
         /*put*/
         System.out.println("put(Integer key, Object Circle)");
         putTimeMap(hashMap, N);
@@ -281,7 +281,7 @@ public class TestMainClass {
 
         //LinkedHashMap
         System.out.println("----- LinkedHashMap -----");
-        LinkedHashMap<Integer,Integer> linkedHashMap = new LinkedHashMap<Integer, Integer>();
+        Map<Integer,Integer> linkedHashMap = new LinkedHashMap<Integer, Integer>();
         /*put*/
         System.out.println("put(Integer key, Object Circle)");
         putTimeMap(linkedHashMap, N);
@@ -295,7 +295,7 @@ public class TestMainClass {
 
         //TreeMap
         System.out.println("----- TreeMap -----");
-        TreeMap<Integer,Integer> treeMap = new TreeMap<Integer, Integer>();
+        Map<Integer,Integer> treeMap = new TreeMap<Integer, Integer>();
         /*put*/
         System.out.println("put(Integer key, Object Circle)");
         putTimeMap(treeMap, N);

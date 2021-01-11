@@ -2,7 +2,7 @@ package ru.ncedu.mylinkedlist;
 
 /**
  * This interface ILinkedList
- * @version 1.0,  Jan 2021
+ * @version 1.0, 3 Jan 2021
  * @author Vladislav Semenovykh
  */
 public interface ILinkedList<E> extends Iterable<E>{
