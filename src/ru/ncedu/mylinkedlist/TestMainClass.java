@@ -165,7 +165,7 @@ public class TestMainClass {
 
     public static void main(String[] args){
         final int N= 50000;
-        System.out.println("N = " + N + ", Object new Integer()");
+        System.out.println("N = " + N );
         //Compare ArrayList, LinkedList
         System.out.println("----- Compare ArrayList, LinkedList -----");
         //ArrayList
