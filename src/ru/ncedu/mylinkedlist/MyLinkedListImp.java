@@ -75,9 +75,9 @@ public class MyLinkedListImp<E> implements ILinkedList<E> {
      */
     @Override
     public void add(int index, E element){
-        Node<E> temp = new Node(element);
+       Node<E> temp = new Node(element);
         Node<E> current = this.head;
-        for(int i=0; i<index && current.getNextNode() != null; i++)
+        for(int i=0; i<index-1 && current.getNextNode() != null; i++)
             current = current.getNextNode();
         temp.setNextNode(current.getNextNode());
         current.setNextNode(temp);
