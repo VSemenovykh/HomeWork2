@@ -202,6 +202,24 @@ public class MyLinkedListImp<E> implements ILinkedList<E> {
         }
         return array;
     }
+    
+     /**
+     * Returns an array containing all of the elements in this collection;
+     * the runtime type of the returned array is that of the specified array.
+     * @param a Array elements
+     * @return array elements
+     */
+    @SuppressWarnings("unchecked")
+    public E[] toArray(E[] a) {
+        this.array = toArray();
+        if (a.length < size())
+            // Make a new array of a's runtime type, but my contents:
+            return (E[]) Arrays.copyOf(array, size(), a.getClass());
+        System.arraycopy(array, 0, a, 0, size());
+        if (a.length > size())
+            a[size()] = null;
+        return a;
+    }
 
     /**
      * String representation instance this class
