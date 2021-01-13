@@ -166,17 +166,17 @@ public class MainClass {
         mylinkedlist2.add(new Circle(2.0, "blue"));
         mylinkedlist2.add(2, new Circle(10.0, "gray"));
 
-        System.out.println("get: " +  mylinkedlist2.get(2));
-        System.out.println("indexOf: " +  mylinkedlist2.indexOf(new Circle(0.5, "yellow")) );
-        System.out.println("remove: " + mylinkedlist2.remove(1));
+        System.out.println("toString: " + mylinkedlist2.toString());
+        System.out.println("get by index = 2: " +  mylinkedlist2.get(2));
+        System.out.println("indexOf by Circle(0.5, yellow): " +  mylinkedlist2.indexOf(new Circle(0.5, "yellow")) );
+        System.out.println("remove by index = 1: " + mylinkedlist2.remove(1));
         System.out.println("toString: " + mylinkedlist2.toString());
         System.out.println("size():  " + mylinkedlist2.size());
 
+        System.out.println("Add element Circle(22.0, ewf) on position 1 : ");
         mylinkedlist2.add(1, new Circle(22.0, "ewf"));
         System.out.println("toString: " + mylinkedlist2.toString());
         System.out.println("size():  " + mylinkedlist2.size());
-
-        mylinkedlist2.set(4, new Circle(5, "fv"));
 
         System.out.println("Iterator");
         Iterator<Circle> itr = mylinkedlist2.iterator();
